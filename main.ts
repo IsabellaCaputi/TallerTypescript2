@@ -11,7 +11,7 @@ mostrarAverage(series);
 function mostrarDetalleSerie(serie: Serie): void {
     detalleTable.innerHTML = '';
     let imagen = document.createElement("tbody");
-    imagen.innerHTML=`<img src=${serie.image} class="card-img-top" title="${serie.name}">`
+    imagen.innerHTML=`<img src=${serie.image} referrerpolicy="no-referrer" class="card-img-top" title="${serie.name}">`
     let tbodyDetalleSerie = document.createElement("tbody");
     tbodyDetalleSerie.innerHTML = `<div class="card-body">
     <h5 class="card-title">${serie.name}</h5>
@@ -19,7 +19,6 @@ function mostrarDetalleSerie(serie: Serie): void {
     <a href=${serie.url}>${serie.url}</a>`;
     detalleTable.appendChild(imagen);
     detalleTable.appendChild(tbodyDetalleSerie);
-    console.log(detalleTable)
 }
 
 
@@ -29,10 +28,10 @@ function mostrarDatosSeries(series: Serie[]): void{
     for(let serie of series){
         let trElement: HTMLElement = document.createElement("tr");
         let linkId = "seriesLink" + index;
-        trElement.innerHTML=`<td>${serie.index}</td>
-        <td><a href="#" class="serie-link" id="${linkId}"</a>${serie.name}</td>
-        <td>${serie.channel}</td>
-        <td>${serie.seasons}</td>`
+        trElement.innerHTML=`<td style="background-color: #f5f5f5e8;">${serie.index}</td>
+        <td style="background-color: #f5f5f5e8;"><a href="#" class="serie-link" id="${linkId}"</a>${serie.name}</td>
+        <td style="background-color: #f5f5f5e8;">${serie.channel}</td>
+        <td style="background-color: #f5f5f5e8;">${serie.seasons}</td>`
         tbodySerie.appendChild(trElement);
         index++;
     }

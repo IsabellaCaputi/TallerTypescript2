@@ -7,7 +7,7 @@ mostrarAverage(series);
 function mostrarDetalleSerie(serie) {
     detalleTable.innerHTML = '';
     var imagen = document.createElement("tbody");
-    imagen.innerHTML = "<img src=".concat(serie.image, " class=\"card-img-top\" title=\"").concat(serie.name, "\">");
+    imagen.innerHTML = "<img src=".concat(serie.image, " referrerpolicy=\"no-referrer\" class=\"card-img-top\" title=\"").concat(serie.name, "\">");
     var tbodyDetalleSerie = document.createElement("tbody");
     tbodyDetalleSerie.innerHTML = "<div class=\"card-body\">\n    <h5 class=\"card-title\">".concat(serie.name, "</h5>\n    <p class=\"card-text\">").concat(serie.description, "</span></p>\n    <a href=").concat(serie.url, ">").concat(serie.url, "</a>");
     detalleTable.appendChild(imagen);
@@ -21,7 +21,7 @@ function mostrarDatosSeries(series) {
         var serie = series_1[_i];
         var trElement = document.createElement("tr");
         var linkId = "seriesLink" + index;
-        trElement.innerHTML = "<td>".concat(serie.index, "</td>\n        <td><a href=\"#\" class=\"serie-link\" id=\"").concat(linkId, "\"</a>").concat(serie.name, "</td>\n        <td>").concat(serie.channel, "</td>\n        <td>").concat(serie.seasons, "</td>");
+        trElement.innerHTML = "<td style=\"background-color: #f5f5f5e8;\">".concat(serie.index, "</td>\n        <td style=\"background-color: #f5f5f5e8;\"><a href=\"#\" class=\"serie-link\" id=\"").concat(linkId, "\"</a>").concat(serie.name, "</td>\n        <td style=\"background-color: #f5f5f5e8;\">").concat(serie.channel, "</td>\n        <td style=\"background-color: #f5f5f5e8;\">").concat(serie.seasons, "</td>");
         tbodySerie.appendChild(trElement);
         index++;
     }
